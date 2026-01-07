@@ -14,7 +14,7 @@ namespace Landis.Library.UniversalCohorts
         private ICohort cohort;
         private ActiveSite site;
         private ExtensionType disturbanceType;
-        private double reduction;
+        private double fractionBiomassReduction;
 
         //---------------------------------------------------------------------
 
@@ -63,11 +63,11 @@ namespace Landis.Library.UniversalCohorts
         /// <summary>
         /// The type of disturbance that killed the cohort.
         /// </summary>
-        public double Reduction
+        public double FractionBiomassReduction
         {
             get
             {
-                return reduction;
+                return fractionBiomassReduction;
             }
         }
         //---------------------------------------------------------------------
@@ -77,12 +77,12 @@ namespace Landis.Library.UniversalCohorts
         /// </summary>
         public MortalityEventArgs(ICohort cohort,
                               ActiveSite site,
-                              ExtensionType disturbanceType, double reduction)
+                              ExtensionType disturbanceType, double fractionBiomassReduction)
         {
             this.cohort = cohort;
             this.site = site;
             this.disturbanceType = disturbanceType;
-            this.reduction = reduction;
+            this.fractionBiomassReduction = fractionBiomassReduction;
         }
     }
 }

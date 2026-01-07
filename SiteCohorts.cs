@@ -321,10 +321,11 @@ namespace Landis.Library.UniversalCohorts
 
             //  Go through list of species cohorts from back to front so that
             //  a removal does not mess up the loop.
-            int totalReduction = 0;
+            //int totalReduction = 0;
             for (int i = cohorts.Count - 1; i >= 0; i--)
             {
-                totalReduction += cohorts[i].MarkCohorts(disturbance);
+                //totalReduction +=
+                cohorts[i].MarkCohorts(disturbance);
                 if (cohorts[i].Count == 0)
                     cohorts.RemoveAt(i);
             }

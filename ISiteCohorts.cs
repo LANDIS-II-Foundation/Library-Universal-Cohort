@@ -13,12 +13,8 @@ namespace Landis.Library.UniversalCohorts
     {
 		//---------------------------------------------------------------------
 		/// <summary>
-		/// Computes who much a disturbance damages the cohorts by reducing
-		/// their biomass.
+		/// Computes who much a disturbance damages the cohorts by reducing	their biomass.
 		/// </summary>
-		/// <returns>
-		/// The total of all the cohorts' biomass reductions.
-		/// </returns>
 		void ReduceOrKillCohorts(IDisturbance disturbance);
 		//---------------------------------------------------------------------
 		/// <summary>
