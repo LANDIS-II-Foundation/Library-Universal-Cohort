@@ -1,3 +1,4 @@
+// Copyright:  The LANDIS-II Foundation
 //  Authors:  Robert M. Scheller, James B. Domingo
 
 using Landis.Core;
@@ -13,7 +14,7 @@ namespace Landis.Library.UniversalCohorts
         private ICohort cohort;
         private ActiveSite site;
         private ExtensionType disturbanceType;
-        private float reduction;
+        private double reduction;
 
         //---------------------------------------------------------------------
 
@@ -62,7 +63,7 @@ namespace Landis.Library.UniversalCohorts
         /// <summary>
         /// The type of disturbance that killed the cohort.
         /// </summary>
-        public float Reduction
+        public double Reduction
         {
             get
             {
@@ -76,7 +77,7 @@ namespace Landis.Library.UniversalCohorts
         /// </summary>
         public MortalityEventArgs(ICohort cohort,
                               ActiveSite site,
-                              ExtensionType disturbanceType, float reduction)
+                              ExtensionType disturbanceType, double reduction)
         {
             this.cohort = cohort;
             this.site = site;

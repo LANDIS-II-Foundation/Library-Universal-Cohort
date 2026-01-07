@@ -1,3 +1,4 @@
+//  Copyright The LANDIS-II Foundation
 //  Authors:  Robert M. Scheller, James B. Domingo
 
 using Landis.Core;
@@ -202,9 +203,6 @@ namespace Landis.Library.UniversalCohorts
         /// </param>
         private void GrowFor1Year(ActiveSite site)
         {
-            //if (isDebugEnabled)
-            //Console.WriteLine("site {0}: grow cohorts for 1 year", site.Location);
-
             //  Create a list of iterators, one iterator per set of species
             //  cohorts.  Iterators go through a species' cohorts from oldest
             //  to youngest.  The list is sorted by age, oldest to youngest;
@@ -216,8 +214,6 @@ namespace Landis.Library.UniversalCohorts
                 OldToYoungIterator itor = speciesCohorts.OldToYoung;
                 InsertIterator(itor, itors);
             }
-
-            //int siteMortality = 0;
 
             //  Loop through iterators until they're exhausted
             while (itors.Count > 0)
@@ -290,19 +286,20 @@ namespace Landis.Library.UniversalCohorts
 
         //---------------------------------------------------------------------
 
-        public virtual int ReduceOrKillCohorts(IDisturbance disturbance)
+        public virtual void ReduceOrKillCohorts(IDisturbance disturbance)
         {
-            int totalReduction = 0;
+            //int totalReduction = 0;
             //  Go through list of species cohorts from back to front so that
             //  a removal does not mess up the loop.
             for (int i = cohorts.Count - 1; i >= 0; i--)
             {
-                totalReduction += cohorts[i].MarkCohorts(disturbance);
+                //totalReduction +=
+                cohorts[i].MarkCohorts(disturbance);
                 if (cohorts[i].Count == 0)
                     cohorts.RemoveAt(i);
             }
 
-            return totalReduction;
+            return; // totalReduction;
         }
         //---------------------------------------------------------------------
 

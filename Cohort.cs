@@ -220,7 +220,7 @@ namespace Landis.Library.UniversalCohorts
                                 ICohort cohort,
                                 ActiveSite site,
                                 ExtensionType disturbanceType,
-                                float reduction)
+                                double reduction)
         {
             if (MortalityEvent != null)
                 MortalityEvent(sender, new MortalityEventArgs(cohort, site, disturbanceType, reduction));
