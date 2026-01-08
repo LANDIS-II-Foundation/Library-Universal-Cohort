@@ -5,8 +5,10 @@
     <AssemblyTitle>Landis.Library.UniversalCohorts-v1</AssemblyTitle>
     <AssemblyCompany>LANDIS-II Foundation</AssemblyCompany>
     <AssemblyProduct>Landis.Library.UniversalCohorts-v1</AssemblyProduct>    
-    <AssemblyVersion>1.2</AssemblyVersion>
     <AssemblyDescription>Universal Cohort Library for LANDIS-II</AssemblyDescription>
+	<AssemblyVersion>1.3</AssemblyVersion>
+	<Version>1.3</Version>
+	<FileVersion>1.3</FileVersion>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/LANDIS-II-Foundation/Library-Base-Cohort</RepositoryUrl>
@@ -17,11 +19,9 @@
     <Authors>Landis-II-Foundation</Authors>         
     <Product>Universal Cohort Library</Product>
     <Copyright>LANDIS-II Foundation</Copyright>   
-    <Version>1.2</Version> 
-    <PackageTags>LANDIS-II;Landis;Library;Cohorts</PackageTags>
-    <Description>Base Cohort Library for LANDIS-II</Description>
-    <PackageReleaseNotes>LANDIS-II v8 update.</PackageReleaseNotes>
-    <FileVersion>1.2</FileVersion>
+	<PackageTags>LANDIS-II;Landis;Library;Cohorts</PackageTags>
+	<Description>Base Cohort Library for LANDIS-II</Description>
+	<PackageReleaseNotes>LANDIS-II v8 update.</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Landis.Core" Version="3.0.1" />
