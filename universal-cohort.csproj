@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <RootNamespace>Landis.Library.UniversalCohorts</RootNamespace>
-    <AssemblyName>Landis.Library.UniversalCohorts-v1</AssemblyName>
-    <AssemblyTitle>Landis.Library.UniversalCohorts-v1</AssemblyTitle>
-    <AssemblyCompany>LANDIS-II Foundation</AssemblyCompany>
-    <AssemblyProduct>Landis.Library.UniversalCohorts-v1</AssemblyProduct>    
-    <AssemblyDescription>Universal Cohort Library for LANDIS-II</AssemblyDescription>
+    <AssemblyName>Landis.Library.UniversalCohorts-v2</AssemblyName>
+    <AssemblyTitle>Landis.Library.UniversalCohorts-v2</AssemblyTitle>
+    <AssemblyProduct>Landis.Library.UniversalCohorts-v2</AssemblyProduct>
+	  <AssemblyCompany>LANDIS-II Foundation</AssemblyCompany>
+	  <AssemblyDescription>Universal Cohort Library for LANDIS-II</AssemblyDescription>
 	<AssemblyVersion>1.3</AssemblyVersion>
 	<Version>1.3</Version>
 	<FileVersion>1.3</FileVersion>
