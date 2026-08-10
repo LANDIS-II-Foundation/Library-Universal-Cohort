@@ -1,10 +1,10 @@
+// Copyright:  The LANDIS-II Foundation
 //  Authors:  Robert M. Scheller, James B. Domingo
 
 using Landis.Core;
 using Landis.SpatialModeling;
 using Landis.Utilities;
 using System;
-using System.Collections.Generic;
 using System.Dynamic;
 
 namespace Landis.Library.UniversalCohorts
@@ -220,10 +220,10 @@ namespace Landis.Library.UniversalCohorts
                                 ICohort cohort,
                                 ActiveSite site,
                                 ExtensionType disturbanceType,
-                                float reduction)
+                                double fractionBiomassReduction)
         {
             if (MortalityEvent != null)
-                MortalityEvent(sender, new MortalityEventArgs(cohort, site, disturbanceType, reduction));
+                MortalityEvent(sender, new MortalityEventArgs(cohort, site, disturbanceType, fractionBiomassReduction));
         }
 
         //---------------------------------------------------------------------

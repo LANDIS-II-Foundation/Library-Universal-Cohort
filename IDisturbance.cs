@@ -1,3 +1,4 @@
+// Copyright:  The LANDIS-II Foundation
 //  Authors:  Robert M. Scheller, James B. Domingo
 
 using Landis.Core;
@@ -34,14 +35,11 @@ namespace Landis.Library.UniversalCohorts
         /// Computes how a cohort is damaged by the disturbance.
         /// </summary>
         /// <returns>
-        /// The amount of biomass that the cohort's biomass is to be reduced
+        /// The FRACTION of biomass that the cohort's biomass is to be reduced
         /// by.
         /// </returns>
-        int ReduceOrKillMarkedCohort(ICohort cohort);
+        double ReduceOrKillMarkedCohort(ICohort cohort);
         
-        //int  ChangeForage(ICohort cohort);
-        //int ChangeForageInReach(ICohort cohort);
-        //double ChangeLastBrowseProp(ICohort cohort);
 
     }
 }
