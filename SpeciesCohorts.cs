@@ -408,7 +408,7 @@ namespace Landis.Library.UniversalCohorts
                 //Console.WriteLine("  Reduction: {0}, {1} yrs, {2} Mg/ha, reduction={3}", cohort.Species.Name, cohort.Age, cohort.Biomass, reduction);
                 
                 if (fractionReduction > 0.0) {
-                    int cohortBiomassReduction = (int) fractionReduction * cohort.Biomass;
+                    int cohortBiomassReduction = (int) (fractionReduction * cohort.Biomass);
                     totalReductionBiomass += cohortBiomassReduction;
                     if (cohortBiomassReduction < cohort.Biomass) {
                         ReduceCohort(cohort, disturbance.CurrentSite, disturbance.Type, fractionReduction);
