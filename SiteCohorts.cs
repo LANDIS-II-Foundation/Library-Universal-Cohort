@@ -30,7 +30,7 @@ namespace Landis.Library.UniversalCohorts
         //---------------------------------------------------------------------
 
 
-        public ISpeciesCohorts this[ISpecies species]
+        public virtual ISpeciesCohorts this[ISpecies species]
         {
             get
             {
@@ -345,7 +345,7 @@ namespace Landis.Library.UniversalCohorts
         /// Adds a new cohort for a particular species.
         /// </summary>
 
-        public void AddNewCohort(ISpecies species, ushort age, int initialBiomass, ExpandoObject additionalParameters)
+        public virtual void AddNewCohort(ISpecies species, ushort age, int initialBiomass, ExpandoObject additionalParameters)
         {
             var clonedAdditionalParameters = DeepCopyExpandoObject(additionalParameters);
 
@@ -378,7 +378,7 @@ namespace Landis.Library.UniversalCohorts
         /// Adds a new cohort for a particular species.
         /// </summary>
 
-        public void AddNewCohort(ISpecies species, ushort age, int initialBiomass, double initialANPP, ExpandoObject additionalParameters)
+        public virtual void AddNewCohort(ISpecies species, ushort age, int initialBiomass, double initialANPP, ExpandoObject additionalParameters)
         {
             var clonedAdditionalParameters = DeepCopyExpandoObject(additionalParameters);
 
@@ -411,7 +411,7 @@ namespace Landis.Library.UniversalCohorts
         /// <summary>
         /// Add new age-only cohort.  Only used to maintain interface.  .DO NOT USE.
         /// </summary>
-        public void AddNewCohort(ISpecies species)
+        public virtual void AddNewCohort(ISpecies species)
         {
         }
 
@@ -430,7 +430,7 @@ namespace Landis.Library.UniversalCohorts
             return clone;
         }
 
-        public bool IsMaturePresent(ISpecies species)
+        public virtual bool IsMaturePresent(ISpecies species)
         {
             for (int i = 0; i < cohorts.Count; i++) {
                 SpeciesCohorts speciesCohorts = cohorts[i];
