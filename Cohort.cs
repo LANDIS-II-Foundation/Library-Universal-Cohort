@@ -45,9 +45,10 @@ namespace Landis.Library.UniversalCohorts
 
         //---------------------------------------------------------------------
 
-        public ISpecies Species
+        public virtual ISpecies Species
         {
-            get {
+            get 
+            {
                 return species;
             }
         }
@@ -68,28 +69,42 @@ namespace Landis.Library.UniversalCohorts
 
         //---------------------------------------------------------------------
 
-        public ushort Age
+        public virtual ushort Age
         {
-            get {
+            get
+            {
                 return data.Age;
             }
-        }
-
-        //---------------------------------------------------------------------
-
-        public int Biomass
-        {
-            get {
-                return data.Biomass;
+            set
+            {
+                data.Age = value;
             }
         }
 
         //---------------------------------------------------------------------
-        public double ANPP
+
+        public virtual int Biomass
+        {
+            get 
+            {
+                return data.Biomass;
+            }
+            set
+            {
+                data.Biomass = value;
+            }
+        }
+
+        //---------------------------------------------------------------------
+        public virtual double ANPP
         {
             get
             {
                 return data.ANPP;
+            }
+            set
+            {
+                data.ANPP = value;
             }
         }
 
@@ -174,7 +189,7 @@ namespace Landis.Library.UniversalCohorts
         /// <summary>
         /// Increments the cohort's age by one year.
         /// </summary>
-        public void IncrementAge()
+        public virtual void IncrementAge()
         {
             data.Age += 1;
         }
@@ -184,7 +199,7 @@ namespace Landis.Library.UniversalCohorts
         /// <summary>
         /// Changes the cohort's biomass.
         /// </summary>
-        public void ChangeBiomass(int delta)
+        public virtual void ChangeBiomass(int delta)
         {
             int newBiomass = data.Biomass + delta;
             data.Biomass = System.Math.Max(0, newBiomass);
@@ -193,7 +208,7 @@ namespace Landis.Library.UniversalCohorts
         /// <summary>
         /// Sets the cohort's ANPP.
         /// </summary>
-        public void ChangeANPP(double anpp)
+        public virtual void ChangeANPP(double anpp)
         {
             data.ANPP = Math.Max(0, anpp);
         }
